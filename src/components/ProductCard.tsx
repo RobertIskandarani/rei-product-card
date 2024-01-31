@@ -7,8 +7,8 @@ import {
 } from '../interfaces/Interfaces';
 import { CSSProperties, createContext } from 'react';
 import { useProduct } from '../hooks/useProduct';
-import styles from '../styles/styles.module.css';
 import React from 'react';
+import styles from '../styles/styles.module.css';
 
 export const ProductContext = createContext({} as ProductContextProps);
 const { Provider } = ProductContext;
