@@ -17,7 +17,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "test:watch": "tsdx test --watch"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -46,19 +47,43 @@
       "limit": "10 KB"
     }
   ],
+  "repository": {
+    "url": "https://github.com/RobertIskandarani/rei-product-card",
+    "type": "git"
+  },
+  "homepage": "https://portfolio-robert-iskandarani.vercel.app/",
   "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
     "@rollup/plugin-image": "^3.0.3",
     "@size-limit/preset-small-lib": "^11.0.2",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "babel-jest": "^29.7.0",
     "husky": "^9.0.7",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
     "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^11.0.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "@types/react-test-renderer": "^18.0.7"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "roberto",
+    "iskandarani"
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
